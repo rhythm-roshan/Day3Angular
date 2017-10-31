@@ -1,0 +1,13 @@
+<div class="container">
+<ul class="list">
+  <li><app-switch-child [active]="isActive(1)" (click) = "select(1)" >Tab 1</app-switch-child></li>
+  <li><app-switch-child [active]="isActive(2)" (click) = "select(2)" >Tab 2</app-switch-child></li>
+  <li><app-switch-child [active]="isActive(3)" (click) = "select(3)" >Tab 3</app-switch-child></li>
+</ul>
+</div>
+
+<div class="description" [ngSwitch]="tab">
+  <app-switch-child *ngSwitchCase="1">abc</app-switch-child>
+  <app-switch-child *ngSwitchCase="2">def</app-switch-child>
+  <app-switch-child *ngSwitchCase="3">qwerty</app-switch-child>
+</div>
